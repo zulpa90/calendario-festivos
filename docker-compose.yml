@@ -1,0 +1,44 @@
+services:
+  mongodb:
+    image: mongo:7
+    container_name: mongodb-festivos
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+      MONGO_INITDB_DATABASE: festivos
+    volumes:
+      - mongo_data:/data/db
+      - ./MongoDB/data:/import-data:ro
+      - ./MongoDB/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "mongosh --quiet --host localhost --port 27017 -u $${MONGO_INITDB_ROOT_USERNAME} -p $${MONGO_INITDB_ROOT_PASSWORD} --authenticationDatabase admin --eval \"db.runCommand({ ping: 1 }).ok\" | grep 1 >/dev/null"
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 90s
+
+  express-api:
+    build:
+      context: ./ExpressJS
+      dockerfile: Dockerfile
+    container_name: expressjs-festivos
+    restart: unless-stopped
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    environment:
+      PORT: 3000
+      MONGODB_URI: mongodb://admin:admin123@mongodb:27017/festivos?authSource=admin
+      CORS_ORIGIN: http://localhost:4200
+    ports:
+      - "3000:3000"
+
+volumes:
+  mongo_data:

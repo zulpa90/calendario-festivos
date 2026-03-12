@@ -1,0 +1,399 @@
+{
+  "info": {
+    "_postman_id": "f8c61fd3-1810-4c66-bf9a-9f4842d0af21",
+    "name": "Festivos ExpressJS API",
+    "description": "Coleccion de pruebas para la API de festivos en ExpressJS con MongoDB.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "tipoId",
+      "value": "1"
+    },
+    {
+      "key": "festivoId",
+      "value": "1"
+    },
+    {
+      "key": "anio",
+      "value": "2026"
+    },
+    {
+      "key": "mes",
+      "value": "3"
+    },
+    {
+      "key": "dia",
+      "value": "23"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/health",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "health"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tipos",
+      "item": [
+        {
+          "name": "Listar Tipos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipo/listar",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipo",
+                "listar"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obtener Tipo por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipo/obtener/{{tipoId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipo",
+                "obtener",
+                "{{tipoId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Agregar Tipo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"estandar\": \"Tipo desde Postman\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/tipo/agregar",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipo",
+                "agregar"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Modificar Tipo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"estandar\": \"Tipo actualizado desde Postman\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/tipo/modificar/{{tipoId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipo",
+                "modificar",
+                "{{tipoId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eliminar Tipo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipo/eliminar/{{tipoId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipo",
+                "eliminar",
+                "{{tipoId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Buscar Tipo por Nombre",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipo/buscar?nombre=Fijo",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipo",
+                "buscar"
+              ],
+              "query": [
+                {
+                  "key": "nombre",
+                  "value": "Fijo"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Festivos",
+      "item": [
+        {
+          "name": "Listar Festivos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/festivos/listar",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "festivos",
+                "listar"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obtener Festivo por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/festivos/obtener/{{festivoId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "festivos",
+                "obtener",
+                "{{festivoId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Agregar Festivo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Festivo Postman\",\n  \"dia\": 10,\n  \"mes\": 6,\n  \"diasPascua\": 0,\n  \"clasificacionFestivo\": {\n    \"id\": 1\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/festivos/agregar",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "festivos",
+                "agregar"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Modificar Festivo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Festivo Postman Actualizado\",\n  \"dia\": 11,\n  \"mes\": 6,\n  \"diasPascua\": 0,\n  \"clasificacionFestivo\": {\n    \"id\": 1\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/festivos/modificar/{{festivoId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "festivos",
+                "modificar",
+                "{{festivoId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eliminar Festivo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/festivos/eliminar/{{festivoId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "festivos",
+                "eliminar",
+                "{{festivoId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Buscar Festivos por Nombre",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/festivos/buscar?nombre=Navidad",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "festivos",
+                "buscar"
+              ],
+              "query": [
+                {
+                  "key": "nombre",
+                  "value": "Navidad"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Listar Festivos por Tipo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/festivos/tipo/2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "festivos",
+                "tipo",
+                "2"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Validaciones",
+      "item": [
+        {
+          "name": "Verificar si una Fecha es Festiva",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/festivos/verificar/{{anio}}/{{mes}}/{{dia}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "festivos",
+                "verificar",
+                "{{anio}}",
+                "{{mes}}",
+                "{{dia}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obtener Festivos por Anio",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/festivos/obtener/{{anio}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "festivos",
+                "obtener",
+                "{{anio}}"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
