@@ -7,6 +7,7 @@ import com.calendario.api.calendario_api.data.repository.TipoRepository;
 import com.calendario.api.calendario_api.dto.FestivoDTO;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -27,10 +28,11 @@ public class CalendarioService {
     private TipoRepository tipoRepository;
 
     private final RestTemplate restTemplate = new RestTemplate();
-    private final String API_FESTIVOS_URL = "http://localhost:8081/festivos/obtener/"; //TODO: Reemplazar por el que corresponde
+    @Value("${festivos.api.url}")
+    private String apiFestivosUrl;
 
     public List<FestivoDTO> getHolidaysByYear(int year) {
-        String url = API_FESTIVOS_URL + year;
+        String url = apiFestivosUrl + year;
 
         FestivoDTO[] festivosArray = restTemplate.getForObject(url, FestivoDTO[].class);
         return Arrays.asList(festivosArray);

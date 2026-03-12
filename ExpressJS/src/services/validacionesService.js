@@ -129,7 +129,7 @@ async function obtenerFestivosAnio(anio) {
     }
 
     resultado.push({
-      nombre: festivo.nombre,
+      festivo: festivo.nombre,
       fecha: formatDateISO(fecha)
     });
   }

@@ -1,7 +1,7 @@
 {
   "name": "festivos-expressjs",
   "version": "1.0.0",
-  "description": "API de calculo de dias festivos migrada a ExpressJS con MongoDB",
+  "description": "API de calculo de dias festivos en ExpressJS con MongoDB",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
