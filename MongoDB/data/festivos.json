@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ano Nuevo",
+    "dia": 1,
+    "mes": 1,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 1, "estandar": "Fijo" }
+  },
+  {
+    "id": 2,
+    "nombre": "Dia del Trabajo",
+    "dia": 1,
+    "mes": 5,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 1, "estandar": "Fijo" }
+  },
+  {
+    "id": 3,
+    "nombre": "Independencia de Colombia",
+    "dia": 20,
+    "mes": 7,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 1, "estandar": "Fijo" }
+  },
+  {
+    "id": 4,
+    "nombre": "Batalla de Boyaca",
+    "dia": 7,
+    "mes": 8,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 1, "estandar": "Fijo" }
+  },
+  {
+    "id": 5,
+    "nombre": "Inmaculada Concepcion",
+    "dia": 8,
+    "mes": 12,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 1, "estandar": "Fijo" }
+  },
+  {
+    "id": 6,
+    "nombre": "Navidad",
+    "dia": 25,
+    "mes": 12,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 1, "estandar": "Fijo" }
+  },
+  {
+    "id": 7,
+    "nombre": "Reyes Magos",
+    "dia": 6,
+    "mes": 1,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 2, "estandar": "Ley Puente Festivo" }
+  },
+  {
+    "id": 8,
+    "nombre": "San Jose",
+    "dia": 19,
+    "mes": 3,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 2, "estandar": "Ley Puente Festivo" }
+  },
+  {
+    "id": 9,
+    "nombre": "San Pedro y San Pablo",
+    "dia": 29,
+    "mes": 6,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 2, "estandar": "Ley Puente Festivo" }
+  },
+  {
+    "id": 10,
+    "nombre": "Asuncion de la Virgen",
+    "dia": 15,
+    "mes": 8,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 2, "estandar": "Ley Puente Festivo" }
+  },
+  {
+    "id": 11,
+    "nombre": "Dia de la Raza",
+    "dia": 12,
+    "mes": 10,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 2, "estandar": "Ley Puente Festivo" }
+  },
+  {
+    "id": 12,
+    "nombre": "Todos los Santos",
+    "dia": 1,
+    "mes": 11,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 2, "estandar": "Ley Puente Festivo" }
+  },
+  {
+    "id": 13,
+    "nombre": "Independencia de Cartagena",
+    "dia": 11,
+    "mes": 11,
+    "diasPascua": 0,
+    "clasificacionFestivo": { "id": 2, "estandar": "Ley Puente Festivo" }
+  },
+  {
+    "id": 14,
+    "nombre": "Jueves Santo",
+    "dia": 0,
+    "mes": 0,
+    "diasPascua": -3,
+    "clasificacionFestivo": { "id": 3, "estandar": "Basado en Pascua" }
+  },
+  {
+    "id": 15,
+    "nombre": "Viernes Santo",
+    "dia": 0,
+    "mes": 0,
+    "diasPascua": -2,
+    "clasificacionFestivo": { "id": 3, "estandar": "Basado en Pascua" }
+  },
+  {
+    "id": 16,
+    "nombre": "Ascension del Senor",
+    "dia": 0,
+    "mes": 0,
+    "diasPascua": 40,
+    "clasificacionFestivo": { "id": 4, "estandar": "Basado en Pascua y trasladado al lunes" }
+  },
+  {
+    "id": 17,
+    "nombre": "Corpus Christi",
+    "dia": 0,
+    "mes": 0,
+    "diasPascua": 61,
+    "clasificacionFestivo": { "id": 4, "estandar": "Basado en Pascua y trasladado al lunes" }
+  },
+  {
+    "id": 18,
+    "nombre": "Sagrado Corazon",
+    "dia": 0,
+    "mes": 0,
+    "diasPascua": 68,
+    "clasificacionFestivo": { "id": 4, "estandar": "Basado en Pascua y trasladado al lunes" }
+  }
+]
